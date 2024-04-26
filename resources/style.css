@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Universal Styles */
+
+:root {
+    --primary-color: #4A4E69;
+    --secondary-color: #C9CCD5;
+    --Accent: #4ECDC4;
+    --detail: #FFFFFF;
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --border-radius: 7px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open sans';
+}
+
+html {
+    position: relative;
+}
+
+body {
+    border: 2px solid black;
+    position: relative;
+}
+
+
+/* Sidebar */
+
+#sidebar {
+    transition: width 0.5s ease;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    border: 2px solid black;
+}
+
+#sidebar .menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#sidebar .menu button {
+    font-size: 26px;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+}
+
+#sidebar .menu button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+#sidebar .search {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#sidebar .search input {
+    position: relative;
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+}
+
+#sidebar .search button {
+    font-size: 18px;
+    background: none;
+    border: none;
+    padding: 2px;
+    position: absolute;
+    right: 15px;
+    height: 26px;
+    width: 30px;
+}
+
+#sidebar .search button:hover {
+    transition: all 0.4s ease;
+    border-radius: 4px;
+    transform: scale(1.2);
+}
+
+
+/* To-do boxes */
+
+#sidebar .sidebar-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 180px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin: 10px auto;
+}
+
+#sidebar .sidebar-container h4 {
+    width: 100%;
+    padding: 10px;
+}
+
+#sidebar .sidebar-container button {
+    width: 90%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+#sidebar .sidebar-container button i {
+    padding: 5px;
+    font-size: 18px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+/* Main body - tasks*/
+
+#main {
+    margin-left: 300px;
+    border: 3px solid black;
+    height: 100vh;
+    position: relative;
+    transition: margin-left 0.5s ease;
+}
+
+#main h1 {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+#main hr {
+    width: 50%;
+    margin-left: 30px;
+}
+
+#main .current {
+    border: 2px solid black;
+    border-radius: 7px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 30px;
+}
+
+#main .task-container {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 50%;
+    margin: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+}
+
+#main .task-container button {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    position: relative;
+    width: 85%;
+    height: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#main .task-container button i {
+    font-size: 20px;
+}
+
+
+/* task creation */
+
+.creation-container {
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    height: 90%;
+    width: 30%;
+    top: 30px;
+    right: 30px;
+}
+
+.creation-container h2 {
+    margin: 20px;
+}
+
+.creation-container hr {
+    width: 90%;
+    margin-left: 20px;
+}
+
+.creation-container #task-name {
+    margin: 15px 0px 15px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+}
+
+.creation-container #desc {
+    margin: 15px 0px 15px 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 90%;
+    height: 20%;
+    resize: none;
+}
+
+.creation-container .tag-container {
+    height: 35%;
+    width: 90%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.creation-container .tag-container .task-setter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.creation-container .tag-container .task-setter span {
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    width: 45%;
+    border-radius: 5px;
+}
+
+.creation-container .tag-container .task-setter select,
+.creation-container .tag-container .task-setter input {
+    width: 45%;
+    font-size: 14px;
+    padding: 0px 5px 0px 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.submit {
+    width: 90%;
+    margin: 15px 0px 0px 20px;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+} 
+
+.submit button {
+    width: 40%;
+    font-size: 16px;
+}
