@@ -33,18 +33,18 @@
 
     <div class="lists sidebar-container">
       <h4>Lists</h4>
-      <button>Personal</button>
-      <button>Groceries</button>
-      <button>Gym</button>
+      <button id="personal">Personal</button>
+      <button id="groceries">Groceries</button>
+      <button id="gym">Gym</button>
       <button class="add">New List...<i class="bx bx-plus"></i></button>
     </div>
 
     <div class="tags sidebar-container">
       <h4>Tags</h4>
-      <button>Tag-1</button>
-      <button>Tag-2</button>
-      <button>Tag-3</button>
-      <button>New Tag...<i class="bx bx-plus"></i></button>
+      <button id="tag-1">Tag-1</button>
+      <button id="tag-2">Tag-2</button>
+      <button id="tag-3">Tag-3</button>
+      <button id="add">New Tag...<i class="bx bx-plus"></i></button>
     </div>
   </nav>
 
@@ -55,10 +55,10 @@
     <div class="current" id="current_element">[Current element]</div>
 
     <div class="task-container">
-      <button>Some new task <i class="bx bx-chevron-right"></i></button>
-      <button>Some other task <i class="bx bx-chevron-right"></i></button>
-      <button>Some new task, but different <i class="bx bx-chevron-right"></i></button>
-      <button>Create new task...<i class="bx bx-plus" id="task-btn"></i></button>
+      <button id="some-task">Some new task <i class="bx bx-chevron-right"></i></button>
+      <button id="some-task">Some other task <i class="bx bx-chevron-right"></i></button>
+      <button id="some-task">Some new task, but different <i class="bx bx-chevron-right"></i></button>
+      <button id="some-task">Create new task...<i class="bx bx-plus" id="task-btn"></i></button>
     </div>
   </main>
 
@@ -96,8 +96,9 @@
     </div>
 
     <div class="submit">
-      <button id="delete">Delete Task</button>
-      <button id="save">Save Changes</button>
+      <button id="delete", style="background-color:red"><b>Delete Task</b></button>
+      
+      <button id="save", style="background-color:dodgerblue"><b>Save</b></button>
     </div>
   </aside>
 </body>
