@@ -91,4 +91,82 @@ function changeCurrentElement(event) {
     }
 }
 
+// -----------------------------------------------
+// Task Class 
 
+class Task {
+
+    constructor(task_name = "Task Name - ex", task_description = "Task Description - ex", list_name = "List name - ex", tag_name = "Tag name -ex ") {
+        this.task_name = task_name;
+        this.task_description = task_description;
+        this.list_name = list_name;
+        this.tag_name = tag_name;
+    } 
+
+    get taskName() {
+        return this.task_name;
+    }
+
+    set changeTask(newTask) {
+        this.task_name = newTask;
+    }
+
+    get taskDescription() {
+        return this.task_description;
+    } 
+
+    set changeDescription(newDescription) {
+        this.task_description = newDescription;
+    }
+
+    get listName() {
+        return this.list_name;
+    }
+
+    set changeListName(newList) {
+        this.list_name = newList;
+    }
+
+    get tagName() {
+        return this.tag_name;
+    }
+
+    set changeTagName(newTag) {
+        this.tag_name = newTag;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let currentTask = new Task();
+
+    // Listen for task name changes
+    document.getElementById('task-name').addEventListener('input', function() {
+        currentTask.changeTask = this.value;
+    });
+
+    // Listen for task description changes
+    document.getElementById('desc').addEventListener('input', function() {
+        currentTask.changeDescription = this.value;
+    });
+
+    // Listen for list selection changes
+    document.getElementById('list-selection').addEventListener('change', function() {
+        currentTask.changeListName = this.value;
+    });
+
+    // Listen for tag selection changes
+    document.getElementById('tag-selection').addEventListener('change', function() {
+        currentTask.changeTagName = this.value;
+    });
+
+    // Optional: add listeners for save and delete buttons
+    document.getElementById('save').addEventListener('click', function() {
+        console.log('Task saved:', currentTask);
+        // Additional code to handle saving the task data
+    });
+
+    document.getElementById('delete').addEventListener('click', function() {
+        console.log('Task deleted');
+        // Additional code to handle task deletion
+    });
+});
