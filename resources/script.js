@@ -170,3 +170,5 @@ document.addEventListener('DOMContentLoaded', function() {
         // Additional code to handle task deletion
     });
 });
+
+console.log(34);
