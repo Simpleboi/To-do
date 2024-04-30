@@ -49,19 +49,19 @@
     </div>
   </nav>
 
-  <!-- Main Page -->
-  <main id="main">
-    <h1>Welcome [user]!</h1>
-    <hr />
-    <div class="current" id="current_element">[Current element]</div>
-
-    <div class="task-container">
-      <button>Some new task <i class="bx bx-chevron-right"></i></button>
-      <button>Some other task <i class="bx bx-chevron-right"></i></button>
-      <button>Some new task, but different <i class="bx bx-chevron-right"></i></button>
-      <button>Create new task...<i class="bx bx-plus" id="task-btn"></i></button>
-    </div>
-  </main>
+    <!-- Main Page -->
+    <main id="main">
+        <h1 id="welcomeMessage">Welcome [user]!</h1>
+        <hr />
+        <div class="current" id="current_element">[Current element]</div>
+  
+        <div class="task-container">
+            <button>Some new task <i class="bx bx-chevron-right"></i></button>
+            <button>Some other task <i class="bx bx-chevron-right"></i></button>
+            <button>Some new task, but different <i class="bx bx-chevron-right"></i></button>
+            <button>Create new task...<i class="bx bx-plus" id="task-btn"></i></button>
+        </div>
+    </main>
 
   <!-- Task Creation -->
   <aside class="creation-container">
@@ -71,36 +71,55 @@
     <hr />
     <textarea id="desc" cols="30" rows="10" placeholder="Enter the task description:"></textarea>
 
-    <div class="tag-container">
-      <div class="task-setter">
-        <span>List</span>
-        <select id="list-selection">
-          <option value="Personal">List Name</option>
-          <option value="Groceries">Groceries</option>
-          <option value="Gym">Gym</option>
-        </select>
-      </div>
+        <div class="tag-container">
+            <div class="task-setter">
+                <span>List</span>
+                <select id="list-selection">
+                    <option value="Personal">List Name</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Gym">Gym</option>
+                    <option value="New">New</option>
+                </select>
+            </div>
 
       <div class="task-setter">
         <span>Due Date</span>
         <input type="datetime-local" id="datetime" />
       </div>
 
-      <div class="task-setter">
-        <span>Tags</span>
-        <select id="tag-selection">
-          <option value="Personal">Tag Name</option>
-          <option value="Groceries">Tag-1</option>
-          <option value="Gym">Tag-2</option>
-        </select>
+            <div class="task-setter">
+                <span>Tags</span>
+                <select id="tag-selection">
+                    <option value="Personal">Tag Name</option>
+                    <option value="Groceries">Tag-1</option>
+                    <option value="Gym">Tag-2</option>
+                    <option value="Gym">Tag-3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="submit">
+            <button id="delete">Delete Task</button>
+            <button id="save">Save Changes</button>
+        </div>
+    </aside>
+
+    <!-- Pop-up bar -->
+    <div id="pop-up" class="pop-up">
+      <h1>Get Started</h1>
+      <hr />
+      <div class="input">
+        <input type="text" placeholder="Enter a Username:" id="username" required>
+        <input type="password" placeholder="Enter a Password:" id="password" required>
       </div>
-    </div>
 
-    <div class="submit">
-      <button id="delete">Delete Task</button>
-      <button id="save">Save Changes</button>
-    </div>
-  </aside>
-</body>
+      <div class="log-in">
+        <button>Log In</button>
+        <button>Sign Up</button>
+      </div>
 
+      <h2>To-do or Not to-do, that is the question</h2>
+      <h5>-William Shakespeare (probably)</h5>
+    </div>
+  </body>
 </html>

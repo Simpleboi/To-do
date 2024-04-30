@@ -171,4 +171,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.log(34);
+// Handle the pop-up function
+document.addEventListener('DOMContentLoaded', () => {
+    const popUp = document.getElementById('pop-up');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const logInButton = document.querySelector('.log-in button'); 
+    const welcomeMessage = document.getElementById('welcomeMessage');
+  
+    // Function to update the welcome message
+    function updateWelcomeMessage() {
+      const username = usernameInput.value.trim();
+      welcomeMessage.textContent = `Welcome ${username}!`; 
+    }
+  
+    // Display the pop-up
+    setTimeout(() => {
+      popUp.style.display = 'block';
+      popUp.style.top = '50%';
+      popUp.style.transform = 'translateY(-50%)'; // Center it vertically
+    }, 100);
+  
+    // Update welcome message when logging in
+    logInButton.addEventListener('click', () => {
+      if (usernameInput.value && passwordInput.value) { 
+        updateWelcomeMessage();
+        popUp.style.display = 'none'; 
+      }
+      else if (!usernameInput.value && passwordInput.value) {
+        alert("Please enter your username.")
+      }
+      else if (usernameInput.value && !passwordInput.value) {
+        alert("Please enter your password.")
+      }
+      else {
+        alert("Please enter your Username and Password. If you don't have a log-in, please sign-up");
+      } 
+    });
+    
+    // Bind the Enter key to trigger the login in the username or password fields
+    usernameInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter' && usernameInput.value) {
+        updateWelcomeMessage();
+        popUp.style.display = 'none';
+      }
+    });
+  });  
+
+
