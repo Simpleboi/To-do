@@ -101,6 +101,7 @@ body::before {
     transition: all 0.4s ease;
     border-radius: 4px;
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 /* To-do boxes */
@@ -147,6 +148,7 @@ body::before {
     box-shadow: 8px 8px 10px -2px rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease;
     transform: scale(1.01);
+    cursor: pointer;
 }
 
 /* Main body - tasks*/
@@ -222,6 +224,7 @@ body::before {
     box-shadow: 8px 8px 10px -2px rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease;
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 
@@ -324,6 +327,12 @@ body::before {
     background-color: rgb(209, 253, 143);
 }
 
+
+.submit button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
 /* Resposnvie design for laptops */
 
 @media screen and (max-width: 1024px) {
